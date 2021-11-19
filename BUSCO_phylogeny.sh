@@ -1,3 +1,8 @@
+#Requirements:
+# mafft #
+# trimal #
+# raxml #
+
 ##Collect complete BUSCO genes frequency in the dataset##
 for file in $(find . -name "full_table.tsv"); do
 grep -v "^#" ${file} | awk '$2=="Complete" {print $1}' >> BUSCO_genes.txt;
